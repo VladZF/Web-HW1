@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Баранов В.А.</title>
+    <title>Личный сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Личная страница</h1>
+        <nav>
+            <a id="nav-about" class="active" onclick="showSection('about')">Обо мне</a>
+            <a id="nav-gallery" onclick="showSection('gallery')">Галерея</a>
+        </nav>
     </header>
-    <section>
-        <h2>Баранов Владислав Алексеевич</h2>
-        <img src="character.jpg" alt="Изображение персонажа">
-        <h3>Интересные факты</h3>
+    
+    <section id="about" class="container active">
+        <h1>Обо мне</h1>
+        <img src="photo.jpg" alt="Фотография">
+        <p>Меня зовут Владислав Баранов. 21 год. На данный момент я обучаюсь на 3 курсе НИУ ВШЭ. Программирую в большинстве на 
+            C# и python. Мое главное направление - Backend разработка.</p>
+        <h2>Факты обо мне</h2>
         <ul>
-            <li>1) Являюсь .NET разработчиком</li>
-            <li>2) Студент 3 курса НИУ ВШЭ НН</li>
-            <li>3) Любимый спорт - автогонки (Formula 1, 2, E, etc)</li>
-            <li>4) Любимая компьютерная игра - Mass Effect (оригинальная трилогия)</li>
-            <li>5) Любимый фильм - Начало</li>
-            <li>6) Любимый сериал - Во все тяжкие</li>
+            <li>Очень люблю компьютерные игры</li>
+            <li>Наблюдаю за формулой 1 с 2021 года. Любимый пилот - Ландо Норрис. Любимая команда - McLaren</li>
+            <li>Люблю собираться на автомобильные сходки</li>
         </ul>
-        <button class="btn" onclick="toggleInfo()">Показать больше</button>
-        <p id="extraInfo" class="hidden">Проживаю в Нижегородской области, в городе Дзержинск.
-             Для передвижения между городами использую автомобить KIA RIO.</p>
-        <p><a href="https://github.com/VladZF" target="_blank">Мой GitHub</a></p>
+        <p><a href="https://github.com/VladZF" class="github-link" target="_blank">Мой GitHub</a></p>
     </section>
+    
+    <section id="gallery" class="container">
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="photos/t1.jpg" alt="Фото 1">
+            <img src="photos/t2.jpg" alt="Фото 2">
+            <img src="photos/t3.jpg" alt="Фото 3">
+            <img src="photos/t4.jpg" alt="Фото 4">
+            <img src="photos/t5.jpg" alt="Фото 5">
+            <img src="photos/t6.jpg" alt="Фото 6">
+            <img src="photos/t7.jpg" alt="Фото 7">
+            <img src="photos/t8.jpg" alt="Фото 8">
+            <img src="photos/t9.jpg" alt="Фото 9">
+        </div>
+    </section>
+    
+    <footer>
+        <button class="theme-button" onclick="toggleTheme()">Сменить тему</button>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
